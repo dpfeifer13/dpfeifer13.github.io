@@ -42,5 +42,17 @@ server rather than double-clicking the file.
 
 ## Deploying
 
-Pushing to the `main` branch of the GitHub repo publishes automatically via
-GitHub Pages. `CNAME` keeps the custom domain attached — don't delete it.
+Pushing to the `main` branch publishes automatically via GitHub Pages.
+
+Two constraints worth knowing before you rename anything:
+
+**The repo must be named `<username>.github.io`.** Pages serves a repo with any
+other name from a subfolder (`username.github.io/some-repo/`), and every asset
+here is linked from the site root (`/assets/...`), so the CSS and images would
+404. Naming it `<username>.github.io` serves it from the root instead.
+
+**The custom domain is configured in Settings → Pages,** not by hand. GitHub
+writes a `CNAME` file into the repo when you set it. Don't create that file
+yourself before DNS is pointing at GitHub — Pages will start redirecting the
+working `github.io` URL to a domain that isn't live yet, which looks like the
+deploy broke.
