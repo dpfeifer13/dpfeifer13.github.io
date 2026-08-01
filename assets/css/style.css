@@ -367,6 +367,15 @@ section.tight { padding: 32px 0; }
   align-items: start;
 }
 
+.headshot {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(23,55,100,0.12);
+}
+
 .bio-card {
   background: var(--paper);
   border-radius: var(--radius);
@@ -532,7 +541,104 @@ section.tight { padding: 32px 0; }
   flex-wrap: wrap;
 }
 
-/* ---------------- Placeholder (resume) ---------------- */
+/* ---------------- Resume ---------------- */
+
+.resume {
+  max-width: 780px;
+}
+
+.resume-section {
+  margin-bottom: 44px;
+}
+
+.resume-section > h2 {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(23,55,100,0.12);
+}
+
+.job {
+  margin-bottom: 30px;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.job-head h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.job-org {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 2px 0 0;
+}
+
+.job-dates {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.job ul {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.job li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.job li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.skill-row {
+  margin-bottom: 18px;
+}
+
+.skill-row dt {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.skill-row dd {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+/* ---------------- Placeholder ---------------- */
 
 .placeholder-card {
   background: var(--paper);
