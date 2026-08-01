@@ -17,7 +17,7 @@
   --cream-text: #f3ead4;
   --cream-text-soft: rgba(243, 234, 212, 0.72);
 
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
 
   --max: 1120px;
@@ -188,7 +188,11 @@ footer.site-footer .wrap {
 /* ---------------- Typography helpers ---------------- */
 
 h1, h2, h3 {
-  font-family: var(--serif);
+  font-family: var(--display);
+  font-weight: 800;
+  /* headings are the same family as body text, so they lean on weight and a
+     slight negative tracking rather than a contrasting typeface */
+  letter-spacing: -0.02em;
   color: var(--navy);
   line-height: 1.15;
   margin: 0 0 0.4em;
