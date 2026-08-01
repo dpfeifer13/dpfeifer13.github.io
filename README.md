@@ -6,16 +6,17 @@ Static personal site — plain HTML + CSS, no build step, no dependencies.
 
 ```
 index.html                  About / home
-videoediting/index.html     Portfolio grid
-videoediting/<slug>/        One folder per project
+work/index.html             Portfolio grid
+work/<slug>/                One folder per project
 writing/index.html          Scripts + copywriting
 contact/index.html          Contact
-resume/index.html           Resume (placeholder)
+resume/index.html           Resume
 404.html                    Not-found page
 assets/css/style.css        All styling
-assets/img/                 Logo, favicon
+assets/js/nav.js            Mobile menu toggle
+assets/img/                 Logo, favicon, share card
 assets/img/thumbs/          Project thumbnails
-CNAME                       Custom domain for GitHub Pages
+assets/dylan-pfeifer-resume.pdf   Downloadable resume
 ```
 
 ## Editing
@@ -29,9 +30,9 @@ everywhere (find-and-replace across `*.html` works fine).
 ## Adding a project
 
 1. Drop a 16:9 thumbnail in `assets/img/thumbs/<slug>.jpg` (800px wide is plenty).
-2. Copy an existing folder in `videoediting/`, rename it, and update the title,
+2. Copy an existing folder in `work/`, rename it, and update the title,
    YouTube ID, description and Project Scope list.
-3. Add a card to the grid in `videoediting/index.html`.
+3. Add a card to the grid in `work/index.html`.
 4. Fix the prev/next links on the neighbouring project pages.
 5. Add the URL to `sitemap.xml`.
 
