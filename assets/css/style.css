@@ -360,9 +360,8 @@ section.tight { padding: 32px 0; }
 
 /* ---------------- Bio / about layout ---------------- */
 
-/* soft tinted band behind the intro, echoing the previous site */
-.bio-band {
-  background: var(--accent-soft);
+/* intro sits on the page background; the generous padding does the separating */
+.bio-intro {
   padding: 96px 0;
 }
 
@@ -671,7 +670,7 @@ section.tight { padding: 32px 0; }
 @media (max-width: 880px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .detail-body { grid-template-columns: 1fr; }
-  .bio-band { padding: 64px 0; }
+  .bio-intro { padding: 64px 0; }
   /* photo above the text once there is no room beside it */
   .bio-layout {
     grid-template-columns: 1fr;
