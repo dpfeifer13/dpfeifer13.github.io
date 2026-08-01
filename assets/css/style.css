@@ -406,31 +406,30 @@ section.tight { padding: 24px 0; }
   margin: 0;
 }
 
-/* ---------------- Bio / about layout ---------------- */
+/* ---------------- Intro / about layout ---------------- */
 
-/* intro sits on the page background; padding does the separating */
-.bio-intro {
-  padding: 52px 0;
-}
-
-.bio-layout {
+/* Intro and headline are one block: the photo fills what was an empty right
+   half, and the copy is no longer split across two sections that repeated
+   each other. */
+.hero-layout {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 80px;
   align-items: center;
 }
 
-.bio-text h2 {
-  font-size: clamp(24px, 2.6vw, 31px);
-  max-width: 20em;
-  line-height: 1.3;
+.hero--intro { padding-bottom: 56px; }
+
+.hero-text .lede { max-width: 36em; }
+
+.hero-text .lede--sub {
+  font-size: 17px;
+  margin-top: 14px;
 }
 
-.bio-text h2 .hi { color: var(--accent); }
-
-.bio-text p {
-  color: var(--ink-soft);
-  max-width: 34em;
+.lede .hi {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .headshot {
@@ -439,30 +438,6 @@ section.tight { padding: 24px 0; }
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
-}
-
-.bio-card {
-  background: var(--paper);
-  border-radius: var(--radius);
-  padding: 32px;
-  box-shadow: 0 1px 2px rgba(13,43,78,0.06);
-}
-
-.bio-card dl {
-  margin: 0;
-  display: grid;
-  gap: 18px;
-}
-.bio-card dt {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.bio-card dd {
-  margin: 4px 0 0;
-  font-size: 15px;
 }
 
 /* ---------------- Detail page (video / project) ---------------- */
@@ -717,14 +692,13 @@ section.tight { padding: 24px 0; }
   .wrap { padding: 0 28px; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .detail-body { grid-template-columns: 1fr; }
-  .bio-intro { padding: 40px 0; }
   /* photo above the text once there is no room beside it */
-  .bio-layout {
+  .hero-layout {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
     justify-items: start;
   }
-  .bio-layout .headshot { order: -1; width: 240px; height: 240px; }
+  .hero-layout .headshot { order: -1; width: 240px; height: 240px; }
   /* role details stack above their bullets once there is no room beside them */
   .job { grid-template-columns: 1fr; gap: 14px; }
 }
