@@ -555,11 +555,21 @@ section.tight { padding: 24px 0; }
 }
 .script-card h3 { font-size: 21px; margin-bottom: 10px; }
 .script-card p { color: var(--ink-soft); margin: 0; }
-.script-note {
-  font-size: 14px;
+.writing-heading {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(23,55,100,0.12);
+}
+
+.writing-sub {
+  font-size: 15px;
   color: var(--ink-soft);
-  font-style: italic;
-  margin-top: 28px;
+  margin: 0 0 22px;
 }
 
 /* ---------------- Contact page ---------------- */
