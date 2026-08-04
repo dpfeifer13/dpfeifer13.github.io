@@ -1,6 +1,6 @@
 # dylanjpfeifer.com
 
-Static personal site — plain HTML + CSS, no build step, no dependencies.
+Static personal site: plain HTML + CSS, no build step, no dependencies.
 
 ## Structure
 
@@ -21,7 +21,7 @@ assets/dylan-pfeifer-resume.pdf   Downloadable resume
 
 ## Editing
 
-Everything is hand-written HTML. To change the design, edit `assets/css/style.css` —
+Everything is hand-written HTML. To change the design, edit `assets/css/style.css`;
 the palette lives in the `:root` block at the top.
 
 The header and footer are duplicated in each page. If you change one, change it
@@ -54,6 +54,6 @@ here is linked from the site root (`/assets/...`), so the CSS and images would
 
 **The custom domain is configured in Settings → Pages,** not by hand. GitHub
 writes a `CNAME` file into the repo when you set it. Don't create that file
-yourself before DNS is pointing at GitHub — Pages will start redirecting the
+yourself before DNS is pointing at GitHub. Pages will start redirecting the
 working `github.io` URL to a domain that isn't live yet, which looks like the
 deploy broke.
