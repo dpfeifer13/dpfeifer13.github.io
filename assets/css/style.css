@@ -541,6 +541,57 @@ section.tight { padding: 24px 0; }
   box-shadow: 0 1px 2px rgba(13,43,78,0.06);
   margin-bottom: 24px;
 }
+
+/* Cards that lead somewhere carry a thumbnail and lift on hover, so a linked
+   credit is visibly different from one that is only listed. */
+a.script-card {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 30px;
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.script-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(13,43,78,0.14);
+}
+
+/* No aspect-ratio here: the row stretches this box, and an aspect ratio would
+   then derive the width from that height and overflow the column. */
+.script-thumb {
+  position: relative;
+  background: var(--navy);
+  overflow: hidden;
+  min-height: 150px;
+}
+.script-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.script-body { padding: 26px 30px 26px 0; }
+
+/* Listed-only credits: flatter, so they do not invite a click that goes nowhere */
+.script-card--static {
+  background: transparent;
+  border: 1px solid rgba(13,43,78,0.14);
+  box-shadow: none;
+}
+
+a.script-card h3 { color: var(--navy); }
+a.script-card:hover h3 { color: var(--accent); }
+
+@media (max-width: 720px) {
+  a.script-card { grid-template-columns: 1fr; gap: 0; }
+  /* stacked, there is no row height to fill, so give the thumb its own shape */
+  .script-thumb { aspect-ratio: 16 / 9; min-height: 0; }
+  .script-body { padding: 22px 26px 26px; }
+}
 .script-tag {
   display: inline-block;
   font-size: 11px;
