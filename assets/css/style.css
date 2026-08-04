@@ -420,6 +420,11 @@ section.tight { padding: 24px 0; }
 
 .hero--intro { padding-bottom: 56px; }
 
+/* Page headers that sit directly above a section heading rather than a full
+   block of content, so the two do not drift apart. */
+.hero--compact { padding-bottom: 12px; }
+.hero--compact .lede:last-of-type { margin-bottom: 0; }
+
 .hero-text .lede { max-width: 36em; }
 
 .hero-text .lede--sub {
