@@ -630,13 +630,22 @@ a.script-card:hover h3 { color: var(--accent); }
 
 /* ---------------- Contact page ---------------- */
 
+/* Contact is a short page. Rather than pinning a narrow block to the left of a
+   1600px container and leaving all the emptiness on one side, the block is
+   capped and centred, and the section centres in whatever height is left. */
+.main-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .contact-layout {
   display: grid;
-  /* capped so the details card sits beside the copy rather than drifting to
-     the far edge of a 1600px container */
-  grid-template-columns: minmax(0, 620px) 380px;
-  gap: 64px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 72px;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .contact-facts {
@@ -704,12 +713,12 @@ a.script-card:hover h3 { color: var(--accent); }
 }
 
 .job-head h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
 }
 
 .job-org {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--ink-soft);
   margin: 2px 0 0;
 }
@@ -717,7 +726,7 @@ a.script-card:hover h3 { color: var(--accent); }
 .job-dates {
   display: block;
   margin-top: 6px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--accent);
 }
@@ -734,7 +743,7 @@ a.script-card:hover h3 { color: var(--accent); }
 .job li {
   position: relative;
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink-soft);
 }
 
@@ -764,7 +773,7 @@ a.script-card:hover h3 { color: var(--accent); }
 
 .skill-row dd {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink-soft);
 }
 
